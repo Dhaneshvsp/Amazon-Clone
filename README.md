@@ -20,7 +20,7 @@ This project is a static clone of the Amazon homepage, built using HTML, CSS, an
 
 Here is an animated demonstration of the website's features and interactivity.
 
-**➡️ [Watch the full video demo (MP4)](./assets/amazon-clone-demo.mp4)**
+**➡️ [Watch the full video demo (MP4)](./assets/amazon-clone-demo.gif)**
 
 ---
 
