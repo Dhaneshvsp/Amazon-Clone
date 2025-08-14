@@ -1,302 +1,271 @@
-*{
-    margin:0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+/* Universal Styles */
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    font-family: Arial, Helvetica, sans-serif; /* Sets a consistent font */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
-.nav-bar{
-    height:60px;
-    background-color: #0f1111;
-    color:white;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+/* Navigation Bar Styles */
+.nav-bar {
+    height: 60px;
+    background-color: #0f1111; /* Amazon's dark header color */
+    color: white;
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Vertically centers items */
+    justify-content: space-evenly; /* Distributes items evenly with space around them */
 }
 
-.nav-logo{
-    height:50px;
+.nav-logo {
+    height: 50px;
     width: 113px;
-    border:1px solid transparent;
+    border: 1px solid transparent; /* Transparent border for hover effect */
 }
 
-.logo{
-    height:50px;
-    width:113px;
-    background-image: url('amazon_logo.png');
+.logo {
+    height: 50px;
+    width: 113px;
+    background-image: url('./assets/amazon_logo.png'); /* Sets the Amazon logo */
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.border:hover{
-    border:1px solid white;
+/* Universal hover effect for nav items */
+.border:hover {
+    border: 1px solid white;
     cursor: pointer;
 }
 
-.delivery{
-    height:50px;
-    width:88.64px;
+/* Delivery Location Section */
+.delivery {
+    height: 50px;
+    width: 88.64px;
     border: 1px solid transparent;
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center;
 }
 
-.delivery>p{
-    color:#cccccc;
+.add-first {
+    color: #cccccc;
     font-size: 12px;
     font-weight: bold;
-}
-
-.country>p{
-    color:#ffffff;
-    font-size: 14px;
-    font-weight: bolder;
-}
-
-.country{
-    display: flex;
-    
-}
-
-.delivery{
-    display: flex;
-    flex-direction: column;
-   justify-content: center;
-   
-}
-
-.add-first{
     margin-left: 15px;
 }
 
-.add-sec{
+.country {
+    display: flex;
+}
+
+.country > p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bolder;
     margin-left: 3px;
 }
 
-.input
-{
+/* Search Bar Styles */
+.input {
     display: flex;
     align-items: center;
     border: 3px solid transparent;
     justify-content: space-evenly;
-    border-radius: 30px;
-    overflow: hidden;
+    border-radius: 8px; /* Rounded corners for the search bar container */
+    overflow: hidden; /* Hides parts of child elements that go outside */
 }
-.input:focus-within{
+
+/* Highlight search bar when it's in focus */
+.input:focus-within {
     border: 3px solid orange;
 }
-input{
-    height:38px;
+
+input {
+    height: 38px;
     width: 879.11px;
     border: none;
-    padding-left:10px;
+    padding-left: 10px;
 }
-input:focus{
-    outline:0;
+
+input:focus {
+    outline: 0; /* Removes the default blue outline on focus */
 }
+
 .all {
-    width: 6rem;
-    display: inline;
-}
-.search-icon{
-    height: 38px;
-    width:45px;
-    background-color: rgb(242, 133, 17);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border-radius: 0 3px 3px 0; */
-}
-.all{
     width: 50px;
     height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #E6E6E6;
-    color:#0f1111;
-    /* border-radius: 3px 0 0 3px; */
+    color: #0f1111;
     font-size: 14px;
 }
-#all-nav
-{
+
+#all-nav {
     outline: 0;
     border: 0;
     background-color: transparent;
-    color:#0f1111;
+    color: #0f1111;
     width: 100%;
     height: 100%;
     text-align: center;
-   
 }
-#all-nav:hover{
-    background-color: #e6e6e600;
+
+#all-nav:hover {
     cursor: pointer;
 }
 
-.language{
+.search-icon {
+    height: 38px;
+    width: 45px;
+    background-color: rgb(242, 133, 17); /* Amazon orange */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Language Selection */
+.language {
     height: 33px;
-    width:80px;
+    width: 80px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     column-gap: 3px;
-    border:1px solid transparent;
+    border: 1px solid transparent;
 }
-.language div{
-    height:16px;
-    width:22px;
-    background-image: url('flag.jpg');
+
+.language div {
+    height: 16px;
+    width: 22px;
+    background-image: url('./assets/flag.jpg'); /* US flag image */
     background-repeat: no-repeat;
     background-size: cover;
 }
-.language p{
-    color:#ffffff;
+
+.language pre {
+    color: #ffffff;
     font-size: 14px;
     font-weight: bold;
 }
 
-.account{
-    border:1px solid transparent;
-    height:50px;
-    width:140px;
+/* Account & Cart Styles */
+.account {
+    border: 1px solid transparent;
+    height: 50px;
+    width: 140px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Aligns text to the left */
     justify-content: center;
+    padding-left: 5px;
 }
-#hello,#returns{
+
+#hello, #returns {
     font-size: 12px;
 }
-#acc,#orders{
+
+#acc, #orders {
     font-size: 14px;
     font-weight: bold;
 }
 
-.cart
-{
-   display: flex;
+.cart {
+    display: flex;
     height: 50px;
     width: 84px;
     justify-content: center;
-}
-.cart i{
-    display: flex;
-    align-items: center;
-}
-.cart p{
-    display: flex;
-    flex-direction: column-reverse;
-    font-weight: bold;
-    padding-bottom: 6px;
-}
-.cart i{
-    font-size: 2.1rem;
+    align-items: center; /* Vertically center the cart items */
 }
 
-.menu-section{
+.cart i {
+    font-size: 2.1rem; /* Larger cart icon */
+}
+
+.cart p {
+    font-weight: bold;
+    margin-top: 15px; /* Adjust text position relative to icon */
+}
+
+/* Secondary Navigation Bar (Menu) */
+.menu-section {
     height: 39px;
     width: 100%;
-    background-color: #222f3d;
+    background-color: #222f3d; /* Dark blue menu background */
     color: white;
     display: flex;
-    gap:1rem;
+    gap: 1rem;
     align-items: center;
     font-weight: 300;
 }
 
-.menu-logo{
+.menu-logo {
     margin-left: 1rem;
     display: flex;
     align-items: center;
-    gap:3px;
+    gap: 3px;
 }
 
-.menu-items{
+.menu-items {
     padding: 0.5rem;
     border: 1px solid transparent;
 }
 
-
-.hero-section{
+/* Hero Section (Image Slider) */
+.hero-section {
     height: 25rem;
     width: 100%;
-    /* background-image: url("hero-section.jpg");
-    background-size: cover;
-    background-repeat: no-repeat; */
-    /* display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    overflow: hidden; */
-    position: relative;
-    overflow: hidden;
+    position: relative; /* Allows absolute positioning for children */
+    overflow: hidden; /* Hides the parts of images that are outside the container */
 }
-.slide-container{
+
+.slide-container {
     width: 100%;
     height: 100%;
-    /* background-repeat: no-repeat;
-    background-size: cover; */
-    display: flex;
+    display: flex; /* Aligns images in a row */
 }
-.slides
-{
+
+.slides {
     height: 100%;
-    width:100%;
+    width: 100%;
     object-fit: cover;
     object-position: top;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevents images from shrinking */
 }
-.trans{
-    transition: all 1s;
+
+.trans {
+    transition: all 1s; /* Smooth transition for the sliding effect */
 }
-/* .slide1{
-     background-image: url('slide1.jpg'); 
-}
-.slide2{
-    background-image: url('slide2.jpg');
-}
-.slide3{
-    background-image: url('slide3.jpg');
-}
-.slide4{
-    background-image: url('slide4.jpg');
-}
-.slide5{
-    background-image: url('slide5.jpg');
-}
-.slide6{
-    background-image: url('slide6.jpg');
-} 
-*/
-.slide-buttons{
-    position: absolute;
+
+.slide-buttons {
+    position: absolute; /* Positions buttons relative to the hero-section */
     z-index: 3;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* Centers buttons vertically */
     height: 6rem;
     width: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 6rem;
     cursor: pointer;
     background-color: transparent;
-    outline:0;
     border: 0;
-
-}
-#prevButton{
-    left:3rem;
+    color: white;
 }
 
-#nextButton{
+#prevButton {
+    left: 3rem;
+}
+
+#nextButton {
     right: 3rem;
 }
-.hero-msg{
+
+/* Hero Message Overlay */
+.hero-msg {
     position: absolute;
     bottom: 0;
-    left:3rem;
-    height:3rem;
+    left: 3rem;
+    height: 3rem;
     line-height: 1.8rem;
     background-color: white;
     width: 96%;
@@ -305,273 +274,259 @@ input:focus{
     text-align: center;
     z-index: 3;
 }
-.hero-msg a{
+
+.hero-msg a {
     text-decoration: none;
     color: rgb(221, 113, 6);
 }
 
-.shopping-section{
+/* Shopping Section */
+.shopping-section {
     display: flex;
     background-color: rgb(227, 221, 221);
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows boxes to wrap to the next line on smaller screens */
 }
-.box{
+
+.box {
     margin-top: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height:25rem;
+    height: 25rem;
     width: 25rem;
     background-color: white;
 }
-.flex{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+
+.flex {
+    margin: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap:0.5rem;
+    gap: 0.5rem;
 }
 
-.img{
-    height:20rem;
+.img {
+    height: 20rem;
     width: 20rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.img1{   
-    background-image: url('box1.jpg');
-}
-.img2{
-    background-image: url('box2.jpg');
-}
-.img3{
-    background-image: url('box3.jpg');
-}
-.img4{
-    background-image: url('box4.jpg');
-}
-.box span a{
+
+/* Background images for product boxes */
+.img1 { background-image: url('./assets/box1.jpg'); }
+.img2 { background-image: url('./assets/box2.jpg'); }
+.img3 { background-image: url('./assets/box3.jpg'); }
+.img4 { background-image: url('./assets/box4.jpg'); }
+.img9 { background-image: url('./assets/watch.jpg'); }
+.img10 { background-image: url('./assets/book.jpg'); }
+
+.box span a {
     text-decoration: none;
     font-size: 1.5rem;
 }
-.box h1{
-    font-size:1.5rem;
+
+.box h1 {
+    font-size: 1.5rem;
 }
-.box5,.box-6,.box-7,.box-8{
+
+.box5, .box-6, .box-7, .box-8 {
     margin-bottom: 1rem;
-} 
-/* .box5-content,.box6-content{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: space-between;
-} */
-.grid
-{
+}
+
+/* Grid Layout for Boxes */
+.grid {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-auto-rows: 8rem;
-    gap:1rem;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-auto-rows: 8rem; /* Each row is 8rem high */
+    gap: 1rem;
     justify-content: center;
     align-content: center;
 }
-.grid-images{
+
+.grid-images {
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;  
-}
-.grid-img1{
-    background-image: url('grid1.jpg');
-}
-.grid-img2{
-    background-image: url('grid2.jpg');
-}
-.grid-img3{
-    background-image: url('grid3.jpg');
-}
-.grid-img4{
-    background-image: url('grid4.jpg');
-}
-.grid-img5{
-    background-size: cover;
     background-position: center;
-    background-image: url('grid5.jpg');
-}
-.grid-img6{
-    background-size: cover;
-    background-position: center;
-    background-image: url('grid6.jpg');
-}
-.grid-img7{
-    background-size: cover;
-    background-position: center;
-    background-image: url('grid7.jpg');
-}
-.grid-img8{
-    background-size: cover;
-    background-position: center;
-    background-image: url('grid8.jpg');
-}
-.img9{
-    background-image: url('watch.jpg');
-}
-.img10{
-    background-image: url('book.jpg');
 }
 
+/* Background images for grid items */
+.grid-img1 { background-image: url('./assets/grid1.jpg'); }
+.grid-img2 { background-image: url('./assets/grid2.jpg'); }
+.grid-img3 { background-image: url('./assets/grid3.jpg'); }
+.grid-img4 { background-image: url('./assets/grid4.jpg'); }
+.grid-img5 { background-image: url('./assets/grid5.jpg'); background-size: cover; }
+.grid-img6 { background-image: url('./assets/grid6.jpg'); background-size: cover; }
+.grid-img7 { background-image: url('./assets/grid7.jpg'); background-size: cover; }
+.grid-img8 { background-image: url('./assets/grid8.jpg'); background-size: cover; }
 
-.footer-top
-{
+/* Footer Styles */
+.footer-top {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:11rem;
+    height: 11rem;
+    border-top: 1px solid #ddd; /* Separator line */
 }
-.content
-{
-    border:1px solid black;
+
+.content {
+    border: 1px solid #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width:90%;
-    height:8rem;
-    margin-top:3rem;
-    gap:6px;
-    margin-bottom: 3rem;
+    width: 100%; /* Full width */
+    height: 8rem;
+    gap: 6px;
+    padding: 1rem;
 }
-.content button{
+
+.content button {
     height: 1.9rem;
-    width:15%;
+    width: 250px; /* Fixed width */
     color: black;
     background-color: rgb(242, 133, 17);
     border: 0;
     font-size: 1rem;
     border-radius: 0.5rem;
 }
-.content button:hover{
+
+.content button:hover {
     cursor: pointer;
-    background-color: rgba(242, 133, 17,0.8);
+    background-color: rgba(242, 133, 17, 0.8);
 }
-.content a{
+
+.content a {
     text-decoration: none;
 }
-.back{
+
+.back {
     background-color: #37475a;
-    height:3rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.back a{
+
+.back a {
     text-decoration: none;
     font-size: 1.5rem;
     color: #ffffff;
 }
 
-
-.footer-content{
+.footer-content {
     background-color: #222f3d;
     height: 20rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Aligns items to the top */
     justify-content: space-evenly;
+    padding-top: 2rem; /* Add some space at the top */
 }
-.footer-box a{
+
+.footer-box a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
 }
-.footer-box h1{
+
+.footer-box a:hover {
+    text-decoration: underline;
+}
+
+.footer-box h1 {
     font-size: 1.5rem;
     color: white;
+    margin-bottom: 0.5rem; /* Space below heading */
 }
-.footer-box{
-    height:10rem;
+
+.footer-box {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin: 3rem;
-    gap:0.3rem;
+    gap: 0.3rem;
 }
-.footer-logo{
-    border-top:0.5px solid grey;
+
+.footer-logo {
+    border-top: 0.5px solid grey;
     height: 6rem;
     background-color: #222f3d;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.holder
-{
-    width:50%;
+
+.holder {
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-.amazon{
-    background-image: url('amazon_logo.png');
+
+.amazon {
+    background-image: url('./assets/amazon_logo.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    height:4rem;
+    background-size: contain; /* Ensure logo fits well */
+    height: 4rem;
     width: 10rem;
 }
-.boxes{
+
+.boxes {
     color: white;
     height: 30px;
     width: 10rem;
     border: 0.5px solid grey;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.flag{
+
+.flag {
     width: 15rem;
 }
-.boxes div{
-    background-image: url('flag.jpg');
+
+.boxes div {
+    background-image: url('./assets/flag.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height:16px;
+    height: 16px;
     width: 22px;
 }
 
-.copyright-section{
+/* Copyright Section */
+.copyright-section {
     padding-top: 0.5rem;
-    height:3.5rem;
+    height: 5.5rem; /* Increased height for better spacing */
     background-color: #131A22;
-    color:white;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:6px;
+    gap: 6px;
+    font-size: 0.8rem;
 }
-.copyright-section a{
-    color:white;
+
+.copyright-section a {
+    color: white;
     text-decoration: none;
 }
-.copyright-section a:hover{
+
+.copyright-section a:hover {
     text-decoration: underline;
 }
-.copyright-section div{
+
+.copyright-section div {
     display: flex;
-    gap:22px;
+    gap: 22px;
 }
 
-.footer-content a:hover{
-    text-decoration: underline;
-}
-
-
-.side-bar{
+/* Sidebar (Hidden by default) */
+.side-bar {
     position: fixed;
-    height:100vh;
-    width:10rem;
-    border:1px solid black;
-    background-color: #0f1111;
+    height: 100vh;
+    width: 20rem; /* Wider sidebar */
+    border: 1px solid black;
+    background-color: white;
     z-index: 11;
-    left:0;
+    left: -20rem; /* Positioned off-screen */
+    transition: left 0.3s ease-in-out; /* Smooth transition for showing/hiding */
 }
